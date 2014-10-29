@@ -115,6 +115,13 @@ grunt build:major:"Your commit message here"
 ```
 you can replace *major* with *minor* or *patch* depending on how you would like to increment your package version. A tag with same version number will also be created in git.
 
+### How to test
+This will run tests using karma on all three browsers chrome/firefox/phantomJs
+
+```sh
+grunt test
+```
+
 ### Yeoman Subgenerators
 There are generators for *directive*,*partial*,*service*, *filter*, *module*, and *modal*.
 
