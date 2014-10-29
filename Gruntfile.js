@@ -146,10 +146,18 @@ module.exports = function (grunt) {
           dest: 'build/'
         }]
       }
+    },
+    build: {
+      tasks: ['release'],
+      packageConfig: 'pkg',
+      packages: '*.json',
+      jsonSpace: 2,
+      jsonReplacer: undefined,
+      gitAdd: '--all'
     }
   });
 
-  grunt.registerTask('build',['jshint','clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngmin','uglify','copy','htmlmin','imagemin','clean:after']);
+  grunt.registerTask('release',['jshint','clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngmin','uglify','copy','htmlmin','imagemin','clean:after']);
   grunt.registerTask('serve', ['dom_munger:read','jshint','connect', 'watch']);
   grunt.registerTask('test',['dom_munger:read']);
 
