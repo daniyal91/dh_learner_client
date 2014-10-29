@@ -68,11 +68,11 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {src: ['img/**'], dest: 'build/'},
-          {src: ['vendor/bower_components/font-awesome/fonts/**'],cwd: 'src/', dest: 'build/',filter:'isFile',expand:true}
-          //{src: ['src/vendor/bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'build/'},
-          //{src: ['src/vendor/bower_components/select2/*.png','src/bower_components/select2/*.gif'], dest:'build/css/',flatten:true,expand:true},
-          //{src: ['src/vendor/bower_components/angular-mocks/angular-mocks.js'], dest: 'build/'}
+          {src: ['assets/images/**'], cwd:'src/' ,dest: 'build/',expand:true},
+          {src: ['vendor/font-awesome/fonts/**'],cwd: 'src/', dest: 'build/',filter:'isFile',expand:true}
+          //{src: ['src/vendor/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'build/'},
+          //{src: ['src/vendor/select2/*.png','src/bower_components/select2/*.gif'], dest:'build/css/',flatten:true,expand:true},
+          //{src: ['src/vendor/angular-mocks/angular-mocks.js'], dest: 'build/'}
         ]
       }
     },
@@ -181,7 +181,7 @@ module.exports = function (grunt) {
       //if the spec exists then lets run it
       if (grunt.file.exists(spec)) {
         var files = [].concat(grunt.config('dom_munger.data.appjs'));
-        files.push('src/vendor/bower_components/angular-mocks/angular-mocks.js');
+        files.push('src/vendor/angular-mocks/angular-mocks.js');
         files.push(spec);
         grunt.config('karma.options.files', files);
         tasksToRun.push('karma:during_watch');

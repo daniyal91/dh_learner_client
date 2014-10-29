@@ -1,7 +1,7 @@
 temp/
 build/
 node_modules/
-src/vendor/bower_components/
+src/vendor/
 bower_components/
 _SpecRunner.html
 .DS_Store

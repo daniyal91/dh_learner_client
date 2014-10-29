@@ -1,6 +1,7 @@
 {
   "generator-cg-angular": {
     "uirouter": true,
+    "partialTemplates": ".templates/partial",
     "partialDirectory": "app/",
     "directiveDirectory": "app/components/directive/",
     "filterDirectory": "app/components/filter/",

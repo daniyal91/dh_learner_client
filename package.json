@@ -1,6 +1,6 @@
 {
-  "name": "angularjs-boilerplate",
-  "version": "0.0.2",
+  "name": "app",
+  "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
     "express": "~4.0.0",
