@@ -5,11 +5,12 @@ Well its not just another kickstarter for AngularJS projects but its built with 
 
 ##Features
 
-- Handles automatic *versioning* of your app (Major/Minor/Patch).
-- Automatically *tags* current version number in git.
+- Handles automatic **versioning** of your app (Major/Minor/Patch).
+- Automatically **tags** current version number in git.
 - *Minifies* your css/javascript/images into *build/* directory.
+- git add, git commit and git tag
 - Run tests with Karma using one liner command.
-- Add new directives/filters/modules using yeoman sub generators.
+- Adds new directives/filters/modules using yeoman sub generators.
 
 It comes prepackaged with the most popular design frameworks
 around: [Twitter Bootstrap](http://getbootstrap.com),
@@ -62,17 +63,17 @@ angularjs-boilerplate-tp/
   |  |  |  |- <static files>
   |  |  |- less/
   |  |  |  |- main.less
-  |- vendor/
-  |  |- angular/
-  |  |- angular-animate/
-  |  |- angular-bootstrap/
-  |  |- angular-cookies/
-  |  |- angular-mocks/
-  |  |- angular-resource/
-  |  |- angular-ui-router/
-  |  |- angular-ui-utils/
-  |  |- bootstrap/
-  |  |- font-awesome/
+  |  |- vendor/
+  |  |  |- angular/
+  |  |  |- angular-animate/
+  |  |  |- angular-bootstrap/
+  |  |  |- angular-cookies/
+  |  |  |- angular-mocks/
+  |  |  |- angular-resource/
+  |  |  |- angular-ui-router/
+  |  |  |- angular-ui-utils/
+  |  |  |- bootstrap/
+  |  |  |- font-awesome/
   |- .bowerrc
   |- bower.json
   |- Gruntfile.js
