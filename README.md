@@ -1,9 +1,7 @@
 angularjs-boilerplate-tp
 ========================
 
-A sophisticated build management system for angularjs
-
-A kickstarter for AngularJS projects.
+A kickstarter for AngularJS projects with sophisticated build management system.
 
 ##Quick Start
 
@@ -12,7 +10,8 @@ Install Node.js, Grunt CLI, Yeoman, cg-angular and then:
 ```sh
 git clone git@github.com:10pearls-nabeelkhan/angularjs-boilerplate-tp.git
 cd angularjs-boilerplate-tp
-sudo npm -g install grunt-cli karma bower
+npm -g install yo grunt-cli bower 
+npm install -g generator-cg-angular
 npm install
 bower install
 grunt serve
@@ -47,7 +46,12 @@ angularjs-boilerplate-tp/
   |  |  |- <app logic>
   |  |  |- components/
   |  |  |  |- <reusable directives/filters/modules>
+  |  |- env/
+  |  |  |- local.js
+  |  |  |- development.js
+  |  |  |- production.js
   |  |- assets/
+  |  |  |- fonts/
   |  |  |- images/
   |  |  |  |- <static files>
   |  |  |- less/
@@ -69,3 +73,50 @@ angularjs-boilerplate-tp/
   |- server.js
   |- package.json
 ```
+
+### Directory Explanation
+- `src/` - our application source.
+- `vendor/` - third-party libraries. [Bower](http://bower.io) will install
+  packages here. 
+- `.bowerrc` - the Bower configuration file. This tells Bower to install
+  components into the `vendor/` directory.
+- `bower.json` - this is our project configuration for Bower and it contains the
+  list of Bower dependencies we need.
+- `env` - Folder contains different environments to be used by the app.
+- `Gruntfile.js` - our build script; see "The Build System" below.
+- `package.json` - metadata about the app, used by NPM and our build script. Our
+  NPM dependencies are listed here.
+  - `server.js` - Used to run production code from build/ directory.
+
+### How To Run The App in Development Mode
+To run the application in development environment with live reload simply run
+
+```sh
+grunt serve
+```
+
+### How To Run the App in Production
+To run the application in production mode simply run
+
+```sh
+grunt build
+```
+This will generate your build/ directory with production level code (minified version of html/css/images) which could then be loaded using:
+
+```sh
+node server.js
+```
+
+### How to build with Major/Minor/Patch, git add, commit all at the same time
+You no more have to worry about keeping track of version numbers + tagging at git level its all been taken care of using a simple command below.
+
+```sh
+grunt build:major:"Your commit message here"
+```
+you can replace *major* with *minor* or *patch* depending on how you would like to increment your package version. A tag with same version number will also be created in git.
+
+### To Do
+Need to add authentication system next.
+
+### Contributing
+Don't like the way I did something? I would love to hear your thoughts about it.
