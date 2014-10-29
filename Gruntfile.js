@@ -147,6 +147,26 @@ module.exports = function (grunt) {
         }]
       }
     },
+    karma: {
+      options: {
+        frameworks: ['jasmine'],
+        files: [  //this files data is also updated in the watch handler, if updated change there too
+          '<%= dom_munger.data.appjs %>',
+          'src/vendor/angular-mocks/angular-mocks.js',
+          'src/app/**/*-spec.js'
+        ],
+        logLevel:'ERROR',
+        reporters:['mocha'],
+        autoWatch: false, //watching is handled by grunt-contrib-watch
+        singleRun: true
+      },
+      all_tests: {
+        browsers: ['PhantomJS','Chrome','Firefox']
+      },
+      during_watch: {
+        browsers: ['PhantomJS']
+      },
+    },
     build: {
       tasks: ['release'],
       packageConfig: 'pkg',
@@ -159,7 +179,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('release',['jshint','clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngmin','uglify','copy','htmlmin','imagemin','clean:after']);
   grunt.registerTask('serve', ['dom_munger:read','jshint','connect', 'watch']);
-  grunt.registerTask('test',['dom_munger:read']);
+  grunt.registerTask('test',['dom_munger:read','karma:all_tests']);
 
   grunt.event.on('watch', function(action, filepath) {
     //https://github.com/gruntjs/grunt-contrib-watch/issues/156

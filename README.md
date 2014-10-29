@@ -83,10 +83,10 @@ angularjs-boilerplate-tp/
 - `bower.json` - this is our project configuration for Bower and it contains the
   list of Bower dependencies we need.
 - `env` - Folder contains different environments to be used by the app.
-- `Gruntfile.js` - our build script; see "The Build System" below.
+- `Gruntfile.js` - our build script.
 - `package.json` - metadata about the app, used by NPM and our build script. Our
   NPM dependencies are listed here.
-  - `server.js` - Used to run production code from build/ directory.
+- `server.js` - Used to run production code from build/ directory.
 
 ### How To Run The App in Development Mode
 To run the application in development environment with live reload simply run
@@ -95,7 +95,7 @@ To run the application in development environment with live reload simply run
 grunt serve
 ```
 
-### How To Run the App in Production
+### How To Run the App in Production Mode
 To run the application in production mode simply run
 
 ```sh
@@ -115,8 +115,21 @@ grunt build:major:"Your commit message here"
 ```
 you can replace *major* with *minor* or *patch* depending on how you would like to increment your package version. A tag with same version number will also be created in git.
 
+### Yeoman Subgenerators
+There are generators for *directive*,*partial*,*service*, *filter*, *module*, and *modal*.
+
+```sh
+cd src
+yo cg-angular:directive my-awesome-directive
+yo cg-angular:partial my-partial
+yo cg-angular:service my-service
+yo cg-angular:filter my-filter
+yo cg-angular:module my-module
+yo cg-angular:modal my-modal
+```
+
 ### To Do
 Need to add authentication system next.
 
 ### Contributing
-Don't like the way I did something? I would love to hear your thoughts about it.
+Don't like the way I did something? I would love to hear your input on this.
