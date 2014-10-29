@@ -1,7 +1,24 @@
-angularjs-boilerplate-tp
+Why Another Boilerplate?
 ========================
 
-A kickstarter for AngularJS projects with sophisticated build management system.
+Well its not just another kickstarter for AngularJS projects but its built with sophisticated build management system. We are following the best practices from google.It contains a best-practice directory structure to ensure code reusability and maximum scalability.
+
+##Features
+
+- Handles automatic *versioning* of your app (Major/Minor/Patch).
+- Automatically *tags* current version number in git.
+- *Minifies* your css/javascript/images into *build/* directory.
+- Run tests with Karma using one liner command.
+- Add new directives/filters/modules using yeoman sub generators.
+
+It comes prepackaged with the most popular design frameworks
+around: [Twitter Bootstrap](http://getbootstrap.com),
+[Angular UI](http://angular-ui.github.io),
+[Angular Bootstrap](http://angular-ui.github.io/bootstrap),
+[Font Awesome](http://fortawesome.github.com/Font-Awesome), and
+[LESS](http://lesscss.org). Lastly, it contains a sophisticated
+[Grunt](http://gruntjs.org)-based build system to ensure maximum productivity.
+All you have to do is clone it and start coding!
 
 ##Quick Start
 
@@ -18,17 +35,6 @@ grunt serve
 ```
 
 Finally open `http://localhost:9001/` in your browser and enjoy!
-
-##Purpose
-
-angularjs-boilerplate-tp is designed to kickstart angularjs development while following the best practices from google. It contains a best-practice directory structure to ensure code reusability and maximum scalability. It comes prepackaged with the most popular design frameworks
-around: [Twitter Bootstrap](http://getbootstrap.com),
-[Angular UI](http://angular-ui.github.io),
-[Angular Bootstrap](http://angular-ui.github.io/bootstrap),
-[Font Awesome](http://fortawesome.github.com/Font-Awesome), and
-[LESS](http://lesscss.org). Lastly, it contains a sophisticated
-[Grunt](http://gruntjs.org)-based build system to ensure maximum productivity.
-All you have to do is clone it and start coding!
 
 ### Directory Structure
 
