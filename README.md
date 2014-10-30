@@ -102,25 +102,23 @@ To run the application in development environment with live reload simply run
 grunt serve
 ```
 
-### How To Run the App in Production Mode
-To run the application in production mode simply run
+### Build Process
+Our build process will automatically bump up the version #, create a tag with the same version, commit the changes in git all at the same time using the command below. 
 
 ```sh
-grunt build
+grunt build:patch:"Your commit message here" --env=local
+grunt build:minor:"Your commit message here" --env=development
+grunt build:patch:"Your commit message here" --env=staging
+grunt build:major:"Your commit message here" --env=production
 ```
-This will generate your build/ directory with production level code (minified version of html/css/images) which could then be loaded using:
+
+You can replace *major* with *minor* or *patch* depending on how you would like to increment your package version. This will generate your build/ directory with production level code (minified version of html/css/images) which could then be loaded using:
 
 ```sh
 node server.js
 ```
 
-### How to build with Major/Minor/Patch, git add, commit all at the same time
-You no more have to worry about keeping track of version numbers + tagging at git level its all been taken care of using a simple command below.
-
-```sh
-grunt build:major:"Your commit message here"
-```
-you can replace *major* with *minor* or *patch* depending on how you would like to increment your package version. A tag with same version number will also be created in git.
+Now open `http://localhost:8080/` in your browser to view the application.
 
 ### How to test
 This will run tests using karma on all three browsers chrome/firefox/phantomJs

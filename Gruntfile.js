@@ -86,6 +86,10 @@ module.exports = function (grunt) {
       production: {
         src: 'src/env/production.js',
         dest: 'build/config.js'
+      },
+      staging: {
+        src: 'src/env/staging.js',
+        dest: 'build/config.js'
       }
     },
     dom_munger:{
