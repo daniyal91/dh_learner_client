@@ -74,6 +74,18 @@ module.exports = function (grunt) {
           //{src: ['src/vendor/select2/*.png','src/bower_components/select2/*.gif'], dest:'build/css/',flatten:true,expand:true},
           //{src: ['src/vendor/angular-mocks/angular-mocks.js'], dest: 'build/'}
         ]
+      },
+      development: {
+        src: 'src/env/development.js',
+        dest: 'build/config.js'
+      },
+      local: {
+        src: 'src/env/local.js',
+        dest: 'build/config.js'
+      },
+      production: {
+        src: 'src/env/production.js',
+        dest: 'build/config.js'
       }
     },
     dom_munger:{
@@ -91,6 +103,7 @@ module.exports = function (grunt) {
           remove: ['script[data-remove!="false"]','link[data-remove!="false"]'],
           append: [
             {selector:'body',html:'<script src="app.full.min.js"></script>'},
+            {selector:'body',html:'<script src="config.js"></script>'},
             {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'}
           ]
         },
@@ -177,7 +190,8 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('release',['jshint','clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngmin','uglify','copy','htmlmin','imagemin','clean:after']);
+  var target = grunt.option('env') || 'local';
+  grunt.registerTask('release',['jshint','clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngmin','uglify','copy:main','copy:'+target,'htmlmin','imagemin','clean:after']);
   grunt.registerTask('serve', ['dom_munger:read','jshint','connect', 'watch']);
   grunt.registerTask('test',['dom_munger:read','karma:all_tests']);
 
