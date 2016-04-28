@@ -42,7 +42,7 @@ Finally open `http://localhost:9001/` in your browser and enjoy!
 At a high level, the structure looks roughly like this:
 
 ```
-angularjs-boilerplate-tp/
+dh_learner_client.git/
   |- build/
   |- node_modules/
   |- src/
