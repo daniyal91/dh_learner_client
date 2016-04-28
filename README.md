@@ -26,8 +26,8 @@ All you have to do is clone it and start coding!
 Install Node.js, Grunt CLI, Yeoman, cg-angular and then:
 
 ```sh
-git clone git@github.com:10pearls-nabeelkhan/angularjs-boilerplate-tp.git
-cd angularjs-boilerplate-tp
+git clone git@github.com:daniyal91/dh_learner_clinet.git
+cd dh_learner_client
 npm -g install yo grunt-cli bower 
 npm install -g generator-cg-angular
 npm install
