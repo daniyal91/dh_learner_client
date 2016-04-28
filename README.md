@@ -26,7 +26,7 @@ All you have to do is clone it and start coding!
 Install Node.js, Grunt CLI, Yeoman, cg-angular and then:
 
 ```sh
-git clone git@github.com:daniyal91/dh_learner_clinet.git
+git clone git@github.com:daniyal91/dh_learner_client.git
 cd dh_learner_client
 npm -g install yo grunt-cli bower 
 npm install -g generator-cg-angular
