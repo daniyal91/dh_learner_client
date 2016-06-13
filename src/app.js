@@ -1,10 +1,14 @@
-angular.module('app', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
+angular.module('app', ['ui.bootstrap','ui.utils','ui.router','ngAnimate','ngResource']);
 
 angular.module('app').config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('home', {
         url: '/home',
         templateUrl: 'app/home/home.html'
+    });
+    $stateProvider.state('users', {
+        url: '/users',
+        templateUrl: 'app/users/users.html'
     });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
